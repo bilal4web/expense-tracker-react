@@ -27,11 +27,12 @@ export const AddTransaction = () =>
       <form onSubmit={onSubmit}>
         <div className='form-control'>
           <label htmlFor='description'>Name of Transaction</label>
-          <input type='text' id='description' value={description} onChange={(e) => setDescription(e.target.value)} placeholder='Enter name of the transaction.....' />
+          <input type='text' id='description' value={description} onChange={(e) => setDescription(e.target.value)} placeholder='Enter name of the transaction.....' required />
         </div>
         <div className='form-control'>
           <label htmlFor='transactionamount'>Transaction Amount</label>
-          <input type='text' id='transactionamount' value={transactionamount} onChange={(e) => setTransactionAmount(e.target.value)} placeholder='Enter transactiion amount....' />
+          <input type='text' id='transactionamount' value={transactionamount} onChange={(e) => setTransactionAmount(e.target.value)} placeholder='Enter transactiion amount....' required />
+          <input type='radio' onClick={() => {transactionamount('+'.transactionamount);}}>Income</input>
         </div>
         <button className='btn'>Add Transaction</button>
       </form>
